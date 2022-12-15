@@ -8,6 +8,8 @@ services:
     env_file:
       - ./.env
   web:
+    container_name: yamdb
+    image: aldzu/yamdb
     build: 
         context: ../
         dockerfile: api_yamdb/Dockerfile
