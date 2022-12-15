@@ -10,8 +10,8 @@ services:
   web:
     build: 
         context: ../
-        dockerfile: ./api_yamdb/Dockerfile
-    image: aldzu/yamdb:latest
+        dockerfile: api_yamdb/Dockerfile
+    # image: aldzu/yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
