@@ -11,7 +11,6 @@ services:
     build: 
         context: ../
         dockerfile: ./api_yamdb/Dockerfile
-        version: v0.7.0
     image: aldzu/yamdb:latest
     restart: always
     volumes:
