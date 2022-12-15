@@ -11,11 +11,11 @@ class User(AbstractUser):
         SUPERUSER = "superuser"
 
         @classmethod
-        def choices(self):
+        def choices(cls):
             return [
-                (getattr(self, k), getattr(self, k))
-                for k in self.__dict__.keys()
-                if isinstance(getattr(self, k), str) and "_" not in k
+                (getattr(cls, k), getattr(cls, k))
+                for k in cls.__dict__.keys()
+                if isinstance(getattr(cls, k), str) and "_" not in k
             ]
 
     email = models.EmailField(gettext_lazy("email address"), unique=True)
