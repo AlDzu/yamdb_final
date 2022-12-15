@@ -4,11 +4,8 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.validators import UniqueValidator
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
-from api_yamdb.settings import (
-    MESSAGE_FOR_RESERVED_NAME,
-    MESSAGE_FOR_USER_NOT_FOUND,
-    RESERVED_NAME,
-)
+from api_yamdb.settings import (MESSAGE_FOR_RESERVED_NAME,
+                                MESSAGE_FOR_USER_NOT_FOUND, RESERVED_NAME)
 from reviews.models import Category, Comment, Genre, Review, Title
 
 User = get_user_model()
