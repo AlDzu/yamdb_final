@@ -1,7 +1,6 @@
 
 # Проект YamDB  
-
-https://github.com/aldzu/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg
+![badge](https://github.com/aldzu/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
   
 Проект позволяет собирать отзывы о различных произведениях (фильмы, книги, музыки)  
   
