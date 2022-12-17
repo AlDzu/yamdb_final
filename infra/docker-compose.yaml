@@ -10,9 +10,9 @@ services:
 
   web:
     container_name: yamdb
-    build:
+    # build:
       # context: ../
-      image: ksandr/yamdb
+    image: aldzu/yamdb
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
