@@ -12,7 +12,6 @@ services:
     build:
       context: ../
       image: aldzu/api_yamdb
-      dockerfile: api_yamdb/Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
