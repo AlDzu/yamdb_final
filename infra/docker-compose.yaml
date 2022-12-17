@@ -11,7 +11,7 @@ services:
   web:
     container_name: yamdb
     build:
-      context: ../
+      # context: ../
       image: ksandr/yamdb
     volumes:
       - static_value:/app/static/
