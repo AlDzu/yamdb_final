@@ -44,7 +44,7 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
-          # file: yamdb_final/api_yamdb/Dockerfile
+          file: api_yamdb/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,6 +53,7 @@ jobs:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
+          file: yamdb_final/api_yamdb/Dockerfile
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
