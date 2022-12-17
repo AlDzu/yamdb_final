@@ -10,6 +10,7 @@ services:
   web:
     build:
         context: ../
+        image: ksandr/yamdb
         dockerfile: api_yamdb/Dockerfile
     restart: always
     volumes:
