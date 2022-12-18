@@ -44,7 +44,7 @@ jobs:
         with:
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
-          file: api_yamdb/Dockerfile
+          file: ./Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          file: ./api_yamdb/Dockerfile
+          file: ./Dockerfile
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
