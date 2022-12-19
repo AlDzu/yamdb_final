@@ -49,7 +49,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
-    if: github.ref == ('refs/heads/master' or 'refs/heads/main')
+    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     #  Возможно не так понял, добавить проверку для ветви main которой нет?
     steps:
       - name: executing remote ssh commands to deploy
